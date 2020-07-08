@@ -1,1 +1,1 @@
-# LoanCalculator
+# Amortization Schedule Calculator for Loans
