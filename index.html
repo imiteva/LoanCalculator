@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" 
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" 
+         integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" 
+         crossorigin="anonymous" />
+    <link rel = "stylesheet" href = "./style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <title>Loan Calculator</title>
+</head>
+<body>
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Ivana's Loan Calculator</h1>
+        </div>
+    </div>
+    <div class="row row-flex">
+        <div class="col-sm-6">
+            <div class="loan-container">
+                <form class = "input">  
+                    <label type="text" class="label">Amount</label><br/>
+                    <input type="text" id="amount" class="required" required/> <br/>
+    
+                    <label type="text" class="label">Time (years)</label><br/>
+                    <input type="text" id="years" class="required" required/><br/>
+                    
+                    <label type="text" class="label">Loan Type</label><br/>
+                    <select name="loan-type" class="loan-type">
+                        <option value="housing-loan">Housing loan</option>
+                        <option value="car-loan">Car Loan</option>
+                        <option value="spending-loan">Spending Loan</option>
+                    </select></br>
+
+                    <label type="text" class="label">Interest</label><br/>        
+                    <input type="text" id="interest"  class="required" value="3.5" required/> <br/>
+
+                    <button class="submit" type="submit"> Calculate </button> 
+                </form>  
+            </div>
+        </div>
+
+        <div class="col-sm-6">  
+            <div class="monthly-payment"> 
+            <p id="results">Results</p> <br/> 
+       
+            <p class="monthly-payments">Monthly Payments</p>        
+            <p id="monthlyPayment">$ </p>  
+                <div class="spacer"></div>
+            <p class="total-interest">Total Interest</p>
+            <p id="totalInterest" >% </p>         
+            <div class="spacer"></div>
+            <p class="total-payment">Total Payment </p>
+            <p id="totalPayment" class="total-payment">$ </p>  
+            <div class="spacer"></div>  
+
+        </div>
+    </div>
+        
+    </div>
+
+    <div class="row">
+    
+            <div class="col-sm-12">
+                <div class="amortization-title"> 
+                    <label type="text" class="titleLbl">Amortization Schedule</label> <br/>  
+                    <label type="text" class="datelbl">Start Date</label>  
+                    <p id="startDate" class="start-date"></p>
+                </div>
+            </div>
+            <div class="col-sm-12">
+        <div class="amortization-table">
+            <table data-table="amortization" class="table">
+                <thead class="calculator-amortization-header">
+                    <tr>
+                        <th class="header">Payment Month</th> 
+                        <th>Principal Amount</th> 
+                        <th>Interest Amount</th>                 
+                    </tr>
+                    <tr class="amortization-body">
+                    </tr>
+                </thead> 
+            </table>
+        </div>
+        </div>
+        
+    </div>
+</div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<script src = "./app.js"></script>       
+</body>
+</html>
